@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li, summary { list-style: none;}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* hazır kodlarım */
+
+.full-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-box {
+    width: 920px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.item {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    > img {
+        margin-bottom: 35px;
+    }
+    > h1 {
+        font-family: "Big Shoulders", sans-serif;
+        color: #FFF;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    > p {
+        font-size: 15px;
+        line-height: 25px;
+        color: #FFF;
+        opacity: 0.75;
+        font-weight: 400;
+        height: 125px;
+    }
+    > button {
+        margin-top: auto;
+        font-size: 15px;
+        border: 2px solid transparent;
+        border-radius: 25px;
+        transition: all .3s;
+        cursor: pointer;
+        width: 146px;
+        height: 48px;
+    }
+    > button:hover {
+        border: 2px solid #fff;
+        background-color: transparent;
+        color: #FFF;
+    }
+}
+
+.orange {
+    background-color: #E28625;
+    > button {
+        color: #E28625;
+    }
+}
+
+.blue {
+    background-color: #006971;
+    > button {
+        color: #006971;
+    }
+}
+
+.green {
+    background-color: #004140;
+    > button {
+        color: #004140;
+    }
+}
+
+@media (width < 960px) {
+
+    .full-page {
+        padding: 88px 24px;
+    }
+
+    .main-box {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .item {
+        height: 442px;
+    }
+}
